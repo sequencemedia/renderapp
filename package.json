@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "^1.0.47",
+    "@sequencemedia/rabbit-mq": "^1.0.48",
     "debug": "^4.3.2",
     "node-xlsx": "^0.17.2",
     "socket.io-client": "2.2.0",
