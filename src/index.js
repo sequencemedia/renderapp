@@ -8,8 +8,8 @@ import {
 
 import io from 'socket.io-client'
 
-import socketProtocol from './socket-protocol'
-import socketHostname from './socket-hostname'
+import protocol from './protocol'
+import hostname from './hostname'
 import secure from './secure'
 import rulesMatrix from './rules-matrix'
 import appSettings from './app-settings'
@@ -44,7 +44,7 @@ function getNames (accumulator, rule) {
   return accumulator.concat(name)
 }
 
-const socket = io.connect(`${socketProtocol}://${socketHostname}?token=visitor`, { secure, 'sync disconnect on unload': true })
+const socket = io.connect(`${protocol}://${hostname}?token=visitor`, { secure, 'sync disconnect on unload': true })
 
 export default consume(transformForRabbitMQ(getRabbitMQFromSettingsForAppMode(appSettings, appMode)), ({ content }) => {
   log('handler')
