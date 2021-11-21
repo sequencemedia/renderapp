@@ -1,0 +1,48 @@
+{
+  "name": "@sequencemedia/renderapp",
+  "version": "1.0.0",
+  "description": "Renderapp for Caterham",
+  "main": "./lib/index.js",
+  "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "clean": "rimraf lib",
+    "build": "npm run babel",
+    "babel": "babel src -d lib",
+    "prebuild": "npm run clean",
+    "pre-commit": "npm run lint",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@sequencemedia/rabbit-mq": "^1.0.47",
+    "debug": "^4.3.2",
+    "node-xlsx": "^0.17.2",
+    "socket.io-client": "2.2.0",
+    "ultimate-text-to-image": "^1.0.0",
+    "yargs-parser": "^21.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-export-default-from": "^7.16.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/register": "^7.16.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "core-js": "^3.19.1",
+    "eslint": "7.12.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "husky": "^7.0.4"
+  }
+}
