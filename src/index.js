@@ -18,7 +18,7 @@ import cachePath from './cache-path'
 
 import {
   transformForRabbitMQ,
-  getRabbitMQFromSettingsForAppMode,
+  getRabbitMQFromAppSettingsForAppMode,
   consume
 } from './rabbit-mq'
 
@@ -34,19 +34,43 @@ const isTruthy = (v) => !!(v || '').trim()
 
 const toFrontEndRule = (v) => '+'.concat(v)
 
-function getNames (accumulator, rule) {
-  const {
-    [NAME]: name
-  } = RULES_MATRIX.find(({
-    [FRONT_END_RULE]: frontEndRule
-  }) => frontEndRule === toFrontEndRule(rule))
+const getRulesMatrixRowFrontEndRule = ({ [FRONT_END_RULE]: frontEndRule }) => frontEndRule
 
-  return accumulator.concat(name)
+const getRulesMatrixRowName = ({ [NAME]: name }) => name
+
+function findRulesMatrixRowForFrontEndRule (frontEndRule) {
+  /**
+   *  log('findRulesMatrixRowForFrontEndRule')
+   */
+  return function isFrontEndRule (row) {
+    /**
+     *  log('isFrontEndRule')
+     */
+    return frontEndRule === getRulesMatrixRowFrontEndRule(row)
+  }
+}
+
+function getNames (accumulator, rule) {
+  /**
+   *  log('getNames')
+   */
+  return (
+    accumulator.concat(
+      getRulesMatrixRowName(
+        RULES_MATRIX.find(
+          findRulesMatrixRowForFrontEndRule(
+            toFrontEndRule(rule)
+          )
+        )
+      )
+    )
+  )
 }
 
 const socket = io.connect(`${protocol}://${hostname}?token=visitor`, { secure, 'sync disconnect on unload': true })
+const rabbit = transformForRabbitMQ(getRabbitMQFromAppSettingsForAppMode(appSettings, appMode))
 
-export default consume(transformForRabbitMQ(getRabbitMQFromSettingsForAppMode(appSettings, appMode)), ({ content }) => {
+function handler ({ content }) {
   log('handler')
 
   const {
@@ -65,7 +89,7 @@ export default consume(transformForRabbitMQ(getRabbitMQFromSettingsForAppMode(ap
       .join(' • ')
   )
 
-  const textToImage = new UltimateTextToImage(text, {
+  const ultimateTextToImage = new UltimateTextToImage(text, {
     width,
     height,
     fontFamily: 'Courier New',
@@ -82,7 +106,7 @@ export default consume(transformForRabbitMQ(getRabbitMQFromSettingsForAppMode(ap
   const filePath = path.join(cachePath, fileName)
   const fileType = 'image/jpeg'
 
-  textToImage
+  ultimateTextToImage
     .render()
     .toFile(
       filePath,
@@ -92,4 +116,6 @@ export default consume(transformForRabbitMQ(getRabbitMQFromSettingsForAppMode(ap
       })
 
   socket.emit('imageResponseToServer', JSON.stringify(content))
-})
+}
+
+export default consume(rabbit, handler)

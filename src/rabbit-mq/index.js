@@ -6,8 +6,8 @@ import {
 } from '@sequencemedia/rabbit-mq'
 
 import {
-  hasSettingsForAppMode,
-  getSettingsForAppMode
+  hasAppSettingsForAppMode,
+  getAppSettingsForAppMode
 } from '~/src/app-settings'
 
 const log = debug('@sequencemedia/renderapp')
@@ -37,13 +37,13 @@ const transformForRabbitMQ = ({
   routingKey
 })
 
-function getRabbitMQFromSettingsForAppMode (settings, appMode) {
-  info('getRabbitMQFromSettingsForAppMode')
+function getRabbitMQFromAppSettingsForAppMode (appSettings, appMode) {
+  info('getRabbitMQFromAppSettingsForAppMode')
 
-  if (hasSettingsForAppMode(settings, appMode)) {
+  if (hasAppSettingsForAppMode(appSettings, appMode)) {
     const {
       RabbitMQData = {}
-    } = getSettingsForAppMode(settings, appMode)
+    } = getAppSettingsForAppMode(appSettings, appMode)
 
     return RabbitMQData
   }
@@ -53,7 +53,7 @@ function getRabbitMQFromSettingsForAppMode (settings, appMode) {
 
 export {
   transformForRabbitMQ,
-  getRabbitMQFromSettingsForAppMode,
+  getRabbitMQFromAppSettingsForAppMode,
   publish,
   consume
 }

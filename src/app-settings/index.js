@@ -15,25 +15,25 @@ const info = debug('@sequencemedia/renderapp:app-settings')
 log('`@sequencemedia/renderapp:app-settings` is awake')
 
 function matchFor (appMode = '') {
-  const APPMODE = appMode.toLowerCase()
+  const APP_MODE = appMode.toLowerCase()
 
   return function matchFor ({ AppMode = '' }) {
     return (
-      AppMode.toLowerCase() === APPMODE
+      AppMode.toLowerCase() === APP_MODE
     )
   }
 }
 
-function hasSettingsForAppMode ({ Settings = [] } = {}, appMode = 'web') {
-  info('hasSettingsForAppMode')
+function hasAppSettingsForAppMode ({ Settings = [] } = {}, appMode = 'web') {
+  info('hasAppSettingsForAppMode')
 
   return (
     Settings.some(matchFor(appMode))
   )
 }
 
-function getSettingsForAppMode ({ Settings = [] } = {}, appMode = 'web') {
-  info('getSettingsForAppMode')
+function getAppSettingsForAppMode ({ Settings = [] } = {}, appMode = 'web') {
+  info('getAppSettingsForAppMode')
 
   return (
     Settings.find(matchFor(appMode))
@@ -45,8 +45,8 @@ const APP_SETTINGS_PATH = getAppSettingsPath()
 const APP_SETTINGS = JSON.parse(readFileSync(APP_SETTINGS_PATH))
 
 export {
-  hasSettingsForAppMode,
-  getSettingsForAppMode
+  hasAppSettingsForAppMode,
+  getAppSettingsForAppMode
 }
 
 export {
