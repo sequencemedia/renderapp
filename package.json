@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@sequencemedia/rabbit-mq": "1.0.52",
-    "debug": "^4.3.2",
+    "debug": "^4.3.3",
     "node-xlsx": "^0.17.2",
     "socket.io-client": "2.2.0",
     "ultimate-text-to-image": "^1.0.0",
