@@ -2,6 +2,7 @@ import debug from 'debug'
 
 import {
   publish,
+  queue,
   consume
 } from '@sequencemedia/rabbit-mq'
 
@@ -55,5 +56,6 @@ export {
   transformForRabbitMQ,
   getRabbitMQFromAppSettingsForAppMode,
   publish,
+  queue,
   consume
 }
