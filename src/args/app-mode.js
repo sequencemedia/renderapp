@@ -2,8 +2,8 @@ import debug from 'debug'
 
 import args from '~/src/args'
 
-const log = debug('@sequencemedia')
-const info = debug('@sequencemedia/renderapp')
+const log = debug('@sequencemedia/renderapp')
+const info = debug('@sequencemedia/renderapp:args')
 
 log('`@sequencemedia/renderapp:app-mode` is awake')
 

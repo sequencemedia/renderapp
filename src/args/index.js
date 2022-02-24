@@ -2,7 +2,7 @@ import debug from 'debug'
 
 import yargsParser from 'yargs-parser'
 
-const log = debug('@sequencemedia')
+const log = debug('@sequencemedia/renderapp')
 
 log('`@sequencemedia/renderapp:args` is awake')
 
