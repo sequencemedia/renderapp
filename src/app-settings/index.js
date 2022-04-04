@@ -52,4 +52,5 @@ export {
 export {
   APP_SETTINGS_PATH
 }
+
 export default APP_SETTINGS
