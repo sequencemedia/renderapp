@@ -8,8 +8,10 @@ import {
 
 import io from 'socket.io-client'
 
+import isDefaultPort from './is-default-port'
 import protocol from './protocol'
 import hostname from './hostname'
+import port from './port'
 import secure from './secure'
 import rulesMatrix from './rules-matrix'
 import appSettings from './app-settings'
@@ -67,7 +69,14 @@ function getNames (accumulator, rule) {
   )
 }
 
-const socket = io.connect(`${protocol}://${hostname}?token=visitor`, { secure, 'sync disconnect on unload': true })
+console.log(isDefaultPort)
+
+const uri = isDefaultPort
+  ? `${protocol}://${hostname}?token=visitor`
+  : `${protocol}://${hostname}:${port}?token=visitor`
+const parameters = { secure, 'sync disconnect on unload': true }
+
+const socket = io.connect(uri, parameters)
 const rabbit = transformForRabbitMQ(getRabbitMQFromAppSettingsForAppMode(appSettings, appMode))
 
 function handler ({ content }) {
