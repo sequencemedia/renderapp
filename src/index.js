@@ -69,11 +69,9 @@ function getNames (accumulator, rule) {
   )
 }
 
-console.log(isDefaultPort)
-
 const uri = isDefaultPort
-  ? `${protocol}://${hostname}?token=visitor`
-  : `${protocol}://${hostname}:${port}?token=visitor`
+  ? `${protocol}://${hostname}?token=renderinstance`
+  : `${protocol}://${hostname}:${port}?token=renderinstance`
 const parameters = { secure, 'sync disconnect on unload': true }
 
 const socket = io.connect(uri, parameters)
