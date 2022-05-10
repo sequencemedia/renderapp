@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "1.1.17",
+    "@sequencemedia/rabbit-mq": "1.1.19",
     "debug": "^4.3.4",
     "node-xlsx": "^0.21.0",
     "socket.io-client": "2.2.0",
@@ -35,14 +35,14 @@
     "@babel/preset-env": "^7.17.10",
     "@babel/register": "^7.17.7",
     "babel-plugin-module-resolver": "^4.1.0",
-    "core-js": "^3.22.4",
-    "eslint": "^8.14.0",
+    "core-js": "^3.22.5",
+    "eslint": "^8.15.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.0.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "husky": "^7.0.4"
+    "husky": "^8.0.1"
   }
 }
