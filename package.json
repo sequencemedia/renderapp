@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "1.1.21",
+    "@sequencemedia/rabbit-mq": "1.1.22",
     "debug": "^4.3.4",
     "node-xlsx": "^0.21.0",
     "socket.io-client": "2.2.0",
@@ -27,12 +27,12 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
-    "@babel/core": "^7.17.10",
+    "@babel/core": "^7.17.12",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-export-default-from": "^7.16.7",
-    "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
-    "@babel/preset-env": "^7.17.10",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-export-default-from": "^7.17.12",
+    "@babel/plugin-proposal-export-namespace-from": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
     "@babel/register": "^7.17.7",
     "babel-plugin-module-resolver": "^4.1.0",
     "core-js": "^3.22.5",
