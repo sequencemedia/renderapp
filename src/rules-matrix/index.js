@@ -22,4 +22,5 @@ const [
 export {
   RULES_MATRIX_PATH
 }
+
 export default RULES_MATRIX
