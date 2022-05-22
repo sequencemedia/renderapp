@@ -14,9 +14,10 @@ import hostname from './hostname'
 import port from './port'
 import secure from './secure'
 import rulesMatrix from './rules-matrix'
-import appSettings from './app-settings'
 import appMode from './app-mode'
 import cachePath from './cache-path'
+
+import APP_SETTINGS from './app-settings'
 
 import {
   transformForRabbitMQ,
@@ -75,7 +76,7 @@ const uri = isDefaultPort
 const parameters = { secure, 'sync disconnect on unload': true }
 
 const socket = io.connect(uri, parameters)
-const rabbit = transformForRabbitMQ(getRabbitMQFromAppSettingsForAppMode(appSettings, appMode))
+const rabbit = transformForRabbitMQ(getRabbitMQFromAppSettingsForAppMode(APP_SETTINGS, appMode))
 
 function handler ({ content }) {
   log('handler')

@@ -4,10 +4,7 @@ import {
   readFileSync
 } from 'fs'
 
-import {
-  hasAppSettingsPath,
-  getAppSettingsPath
-} from '~/src/args/app-settings-path'
+import APP_SETTINGS_PATH from '~/src/app-settings-path'
 
 const log = debug('@sequencemedia/renderapp')
 const info = debug('@sequencemedia/renderapp:app-settings')
@@ -40,17 +37,11 @@ function getAppSettingsForAppMode ({ Settings = [] } = {}, appMode = 'web') {
   )
 }
 
-if (!hasAppSettingsPath()) throw new Error('App Settings path not provided')
-const APP_SETTINGS_PATH = getAppSettingsPath()
 const APP_SETTINGS = JSON.parse(readFileSync(APP_SETTINGS_PATH))
 
 export {
   hasAppSettingsForAppMode,
   getAppSettingsForAppMode
-}
-
-export {
-  APP_SETTINGS_PATH
 }
 
 export default APP_SETTINGS
