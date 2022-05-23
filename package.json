@@ -13,7 +13,7 @@
     "build": "npm run babel",
     "babel": "babel src -d lib",
     "prebuild": "npm run clean",
-    "pre-commit": "npm run lint",
+    "pre-commit": "npm run lint && npm run build && git add lib",
     "prepare": "husky install",
     "prepublishOnly": "npm run build"
   },
