@@ -33,6 +33,17 @@ const RULES_MATRIX = rulesMatrix.slice(1)
 const FRONT_END_RULE = 3
 const NAME = 15
 
+const OPTIONS = {
+  fontFamily: 'Courier New',
+  fontColor: 0x00000000,
+  fontSize: 24,
+  lineHeight: 36,
+  backgroundColor: 0xffffffff,
+  margin: 24,
+  align: 'center',
+  valign: 'middle'
+}
+
 const isTruthy = (v) => !!(v || '').trim()
 
 const toFrontEndRule = (v) => '+'.concat(v)
@@ -98,16 +109,9 @@ function handler ({ content }) {
   )
 
   const ultimateTextToImage = new UltimateTextToImage(text, {
+    ...OPTIONS,
     width,
-    height,
-    fontFamily: 'Courier New',
-    fontColor: 0x00000000,
-    fontSize: 24,
-    lineHeight: 36,
-    backgroundColor: 0xffffffff,
-    margin: 24,
-    align: 'center',
-    valign: 'middle'
+    height
   })
 
   const fileName = imageName + extension
