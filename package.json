@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "1.1.114",
+    "@sequencemedia/rabbit-mq": "1.1.115",
     "debug": "^4.3.4",
     "node-xlsx": "^0.21.0",
     "socket.io-client": "2.2.0",
@@ -42,7 +42,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-mocha": "^10.1.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.0",
+    "eslint-plugin-promise": "^6.1.1",
     "husky": "^8.0.1"
   }
 }
