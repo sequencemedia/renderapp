@@ -18,7 +18,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "1.1.129",
+    "@sequencemedia/rabbit-mq": "1.1.130",
     "canvas": "^2.10.2",
     "debug": "^4.3.4",
     "node-xlsx": "^0.21.0",
