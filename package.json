@@ -23,7 +23,7 @@
     "debug": "^4.3.4",
     "node-xlsx": "^0.21.0",
     "socket.io-client": "2.2.0",
-    "ultimate-text-to-image": "^1.0.0",
+    "ultimate-text-to-image": "^1.0.1",
     "yargs-parser": "^21.1.1"
   },
   "devDependencies": {
