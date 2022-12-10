@@ -84,7 +84,9 @@ function getNames (accumulator, rule) {
 const uri = isDefaultPort
   ? `${protocol}://${hostname}?token=renderinstance`
   : `${protocol}://${hostname}:${port}?token=renderinstance`
-const parameters = { secure, 'sync disconnect on unload': true }
+const parameters = { secure, 'sync disconnect on unload': true, cors: { withCredentials: true } }
+
+log({ uri, parameters })
 
 const socket = io.connect(uri, parameters)
 const rabbit = transformForRabbitMQ(getRabbitMQFromAppSettingsForAppMode(APP_SETTINGS, appMode))
