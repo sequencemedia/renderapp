@@ -84,7 +84,7 @@ function getNames (accumulator, rule) {
 const uri = isDefaultPort
   ? `${protocol}://${hostname}?token=renderinstance`
   : `${protocol}://${hostname}:${port}?token=renderinstance`
-const parameters = { secure, 'sync disconnect on unload': true, cors: { withCredentials: true } }
+const parameters = { secure, 'sync disconnect on unload': true, withCredentials: true }
 
 log({ uri, parameters })
 
