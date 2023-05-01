@@ -7,7 +7,7 @@
   "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
   "license": "UNLICENSED",
   "scripts": {
-    "lint": "eslint . --ext .cjs --ext .mjs",
+    "lint": "eslint . --ext .mjs --ext .cjs",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky install"
   },
