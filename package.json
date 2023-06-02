@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "1.2.2",
+    "@sequencemedia/rabbit-mq": "1.2.3",
     "canvas": "^2.11.2",
     "debug": "^4.3.4",
     "node-xlsx": "^0.23.0",
