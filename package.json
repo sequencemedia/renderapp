@@ -13,7 +13,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "1.2.11",
+    "@sequencemedia/rabbit-mq": "1.2.12",
     "canvas": "^2.11.2",
     "debug": "^4.3.4",
     "node-xlsx": "^0.23.0",
@@ -25,8 +25,8 @@
     "@babel/core": "^7.22.6",
     "@babel/eslint-parser": "^7.22.6",
     "@babel/preset-env": "^7.22.6",
-    "@sequencemedia/hooks": "^1.0.439",
-    "core-js": "^3.31.0",
+    "@sequencemedia/hooks": "^1.0.440",
+    "core-js": "^3.31.1",
     "eslint": "^8.44.0",
     "eslint-config-standard": "^17.1.0",
     "husky": "^8.0.3"
