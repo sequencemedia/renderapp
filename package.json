@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/renderapp",
-  "version": "1.1.19",
+  "version": "1.1.20",
   "description": "Renderapp for Caterham",
   "private": true,
   "main": "./src/index.mjs",
