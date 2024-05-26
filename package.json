@@ -36,17 +36,17 @@
     "husky": "^9.0.11"
   },
   "imports": {
-    "#args/*": "./src/args/*.mjs",
-    "#args": "./src/args/index.mjs",
-    "#protocol": "./src/protocol/index.mjs",
-    "#hostname": "./src/hostname/index.mjs",
-    "#port": "./src/port/index.mjs",
-    "#secure": "./src/secure/index.mjs",
-    "#rules-matrix": "./src/rules-matrix/index.mjs",
     "#app-mode": "./src/app-mode/index.mjs",
-    "#cache-path": "./src/cache-path/index.mjs",
     "#app-settings": "./src/app-settings/index.mjs",
     "#app-settings-path": "./src/app-settings-path/index.mjs",
-    "#rabbit-mq": "./src/rabbit-mq/index.mjs"
+    "#args": "./src/args/index.mjs",
+    "#args/*": "./src/args/*.mjs",
+    "#cache-path": "./src/cache-path/index.mjs",
+    "#hostname": "./src/hostname/index.mjs",
+    "#port": "./src/port/index.mjs",
+    "#protocol": "./src/protocol/index.mjs",
+    "#rabbit-mq": "./src/rabbit-mq/index.mjs",
+    "#rules-matrix": "./src/rules-matrix/index.mjs",
+    "#secure": "./src/secure/index.mjs"
   }
 }
