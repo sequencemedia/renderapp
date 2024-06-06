@@ -17,7 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "^2.0.56",
+    "@sequencemedia/rabbit-mq": "^2.0.57",
     "canvas": "^2.11.2",
     "debug": "^4.3.5",
     "node-xlsx": "^0.24.0",
@@ -26,10 +26,10 @@
     "yargs-parser": "^21.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.6",
-    "@babel/eslint-parser": "^7.24.6",
-    "@babel/preset-env": "^7.24.6",
-    "@sequencemedia/hooks": "^1.0.494",
+    "@babel/core": "^7.24.7",
+    "@babel/eslint-parser": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@sequencemedia/hooks": "^1.0.495",
     "core-js": "^3.37.1",
     "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
