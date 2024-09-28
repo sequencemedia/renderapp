@@ -121,3 +121,6 @@ dist
 
 # Deps
 .depsrc
+
+# Hooks
+.husky/hooks
