@@ -17,7 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "^2.0.125",
+    "@sequencemedia/rabbit-mq": "^2.0.126",
     "canvas": "^2.11.2",
     "debug": "^4.3.7",
     "node-xlsx": "^0.24.0",
@@ -26,9 +26,9 @@
     "yargs-parser": "^21.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/eslint-parser": "^7.25.1",
-    "@babel/preset-env": "^7.25.4",
+    "@babel/core": "^7.25.7",
+    "@babel/eslint-parser": "^7.25.7",
+    "@babel/preset-env": "^7.25.7",
     "core-js": "^3.38.1",
     "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
