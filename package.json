@@ -17,7 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "^2.0.139",
+    "@sequencemedia/rabbit-mq": "^2.0.140",
     "canvas": "2.11.2",
     "debug": "^4.3.7",
     "node-xlsx": "^0.24.0",
@@ -32,7 +32,7 @@
     "core-js": "^3.39.0",
     "eslint": "8.57.1",
     "eslint-config-standard": "^17.1.0",
-    "husky": "^9.1.6"
+    "husky": "^9.1.7"
   },
   "imports": {
     "#app-mode": "./src/app-mode/index.mjs",
