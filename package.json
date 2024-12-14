@@ -17,7 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "^2.0.152",
+    "@sequencemedia/rabbit-mq": "^2.0.153",
     "canvas": "2.11.2",
     "debug": "^4.4.0",
     "node-xlsx": "^0.24.0",
