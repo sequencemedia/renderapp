@@ -17,19 +17,19 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@sequencemedia/rabbit-mq": "^2.0.210",
+    "@sequencemedia/rabbit-mq": "^2.0.222",
     "canvas": "2.11.2",
     "debug": "^4.4.1",
     "node-xlsx": "^0.24.0",
     "socket.io-client": "2.2.0",
     "ultimate-text-to-image": "1.0.1",
-    "yargs-parser": "^21.1.1"
+    "yargs-parser": "^22.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.1",
-    "@babel/eslint-parser": "^7.27.1",
-    "@babel/preset-env": "^7.27.2",
-    "core-js": "^3.42.0",
+    "@babel/core": "^7.28.0",
+    "@babel/eslint-parser": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "core-js": "^3.44.0",
     "eslint": "8.57.1",
     "eslint-config-standard": "^17.1.0",
     "husky": "^9.1.7"
